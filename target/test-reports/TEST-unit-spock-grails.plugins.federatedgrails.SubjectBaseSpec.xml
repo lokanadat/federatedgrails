@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="grails" name="grails.plugins.federatedgrails.SubjectBaseSpec" tests="4" time="0.956" timestamp="2011-08-31T06:41:09">
+  <properties />
+  <testcase classname="grails.plugins.federatedgrails.SubjectBaseSpec" name="Ensure subject wont validate with null principal" time="0.8" />
+  <testcase classname="grails.plugins.federatedgrails.SubjectBaseSpec" name="Ensure subject wont validate with blank principal" time="0.065" />
+  <testcase classname="grails.plugins.federatedgrails.SubjectBaseSpec" name="Ensure subject wont validate with non-unique principal" time="0.047" />
+  <testcase classname="grails.plugins.federatedgrails.SubjectBaseSpec" name="Ensure subject will validate" time="0.023" />
+  <system-out><![CDATA[--Output from Ensure subject wont validate with null principal--
+--Output from Ensure subject wont validate with blank principal--
+--Output from Ensure subject wont validate with non-unique principal--
+--Output from Ensure subject will validate--
+]]></system-out>
+  <system-err><![CDATA[--Output from Ensure subject wont validate with null principal--
+--Output from Ensure subject wont validate with blank principal--
+--Output from Ensure subject wont validate with non-unique principal--
+--Output from Ensure subject will validate--
+]]></system-err>
+</testsuite>

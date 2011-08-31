@@ -1,0 +1,5 @@
+--Output from Ensure subject wont validate with null principal--
+--Output from Ensure subject wont validate with blank principal--
+--Output from Ensure subject wont validate with non-unique principal--
+--Output from Ensure subject will validate--
+

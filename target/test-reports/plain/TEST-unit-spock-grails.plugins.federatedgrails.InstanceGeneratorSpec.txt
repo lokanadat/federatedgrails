@@ -1,0 +1,16 @@
+Testsuite: grails.plugins.federatedgrails.InstanceGeneratorSpec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.122 sec
+------------- Standard Output ---------------
+--Output from InstanceGenerator returns SubjectBase when no configuration supplied--
+--Output from InstanceGenerator returns TestSubject when configured as such--
+--Output from InstanceGenerator throws RuntimeException when invalid class set--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from InstanceGenerator returns SubjectBase when no configuration supplied--
+--Output from InstanceGenerator returns TestSubject when configured as such--
+--Output from InstanceGenerator throws RuntimeException when invalid class set--
+------------- ---------------- ---------------
+
+Testcase: InstanceGenerator returns SubjectBase when no configuration supplied took 0.021 sec
+Testcase: InstanceGenerator returns TestSubject when configured as such took 0.05 sec
+Testcase: InstanceGenerator throws RuntimeException when invalid class set took 0.047 sec

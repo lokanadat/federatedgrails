@@ -1,0 +1,6 @@
+--Output from Ensure SessionRecord wont validate with null credential--
+--Output from Ensure SessionRecord wont validate with blank credential--
+--Output from Ensure SessionRecord wont validate null remoteHost credential--
+--Output from Ensure SessionRecord wont validate with blank remoteHost--
+--Output from Ensure SessionRecord wont validate null userAgent credential--
+--Output from Ensure SessionRecord wont validate with blank userAgent--

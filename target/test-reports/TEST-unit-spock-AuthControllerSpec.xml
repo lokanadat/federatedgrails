@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="grails" name="AuthControllerSpec" tests="21" time="2.51" timestamp="2011-08-31T06:41:06">
+  <properties />
+  <testcase classname="AuthControllerSpec" name="that login view will be rendered when automate login is disabled" time="0.954" />
+  <testcase classname="AuthControllerSpec" name="that SP redirect will be invoked when autologin active" time="0.096" />
+  <testcase classname="AuthControllerSpec" name="that logout will redirect to application root" time="0.134" />
+  <testcase classname="AuthControllerSpec" name="Echo returns set attributes" time="0.076" />
+  <testcase classname="AuthControllerSpec" name="Echo returns set headers" time="0.074" />
+  <testcase classname="AuthControllerSpec" name="403 when sp is disabled for federated login" time="0.062" />
+  <testcase classname="AuthControllerSpec" name="incomplete and redirect to federatedincomplete when principal not provided" time="0.112" />
+  <testcase classname="AuthControllerSpec" name="incomplete and redirect to federatedincomplete when credential not provided" time="0.13" />
+  <testcase classname="AuthControllerSpec" name="redirect to root URI when all is valid and no target supplied" time="0.138" />
+  <testcase classname="AuthControllerSpec" name="redirect to target URI when all is valid and target supplied" time="0.075" />
+  <testcase classname="AuthControllerSpec" name="redirect to federatederror when IncorrectCredentialsException thrown" time="0.073" />
+  <testcase classname="AuthControllerSpec" name="redirect to federatederror when DisabledAccountException thrown" time="0.066" />
+  <testcase classname="AuthControllerSpec" name="redirect to federatederror when AuthenticationException thrown" time="0.043" />
+  <testcase classname="AuthControllerSpec" name="403 when local is disabled for local login" time="0.028" />
+  <testcase classname="AuthControllerSpec" name="incomplete and redirect to federatedincomplete when principal not provided to locallogin" time="0.072" />
+  <testcase classname="AuthControllerSpec" name="incomplete and redirect to federatedincomplete when credential not provided to locallogin" time="0.069" />
+  <testcase classname="AuthControllerSpec" name="redirect to root URI when all is valid and no target supplied to locallogin" time="0.038" />
+  <testcase classname="AuthControllerSpec" name="redirect to target URI when all is valid and target supplied to locallogin" time="0.076" />
+  <testcase classname="AuthControllerSpec" name="redirect to federatederror when IncorrectCredentialsException thrown in locallogin" time="0.046" />
+  <testcase classname="AuthControllerSpec" name="redirect to federatederror when DisabledAccountException thrown in locallogin" time="0.051" />
+  <testcase classname="AuthControllerSpec" name="redirect to federatederror when AuthenticationException thrown in locallogin" time="0.052" />
+  <system-out><![CDATA[--Output from that login view will be rendered when automate login is disabled--
+--Output from that SP redirect will be invoked when autologin active--
+--Output from that logout will redirect to application root--
+INFO (AuthController): Signing out subject [1]http://test.com!http://sp.test.com!1234
+--Output from Echo returns set attributes--
+--Output from Echo returns set headers--
+--Output from 403 when sp is disabled for federated login--
+ERROR (AuthController): Attempt to do federated login when Apache SP is not marked active in local configuration
+--Output from incomplete and redirect to federatedincomplete when principal not provided--
+WARN (AuthController): Incomplete federated authentication attempt was aborted
+WARN (AuthController): Unique subject identifier (principal) was not presented
+WARN (AuthController): Internal SAML session identifier (credential) was not presented
+--Output from incomplete and redirect to federatedincomplete when credential not provided--
+WARN (AuthController): Incomplete federated authentication attempt was aborted
+WARN (AuthController): Internal SAML session identifier (credential) was not presented
+--Output from redirect to root URI when all is valid and no target supplied--
+INFO (AuthController): Successfully processed federation based authentication event for subject http://test.com!http://sp.test.com!1234 based on credential provided in 1234-mockid-5678, redirecting to content
+--Output from redirect to target URI when all is valid and target supplied--
+INFO (AuthController): Successfully processed federation based authentication event for subject http://test.com!http://sp.test.com!1234 based on credential provided in 1234-mockid-5678, redirecting to content
+--Output from redirect to federatederror when IncorrectCredentialsException thrown--
+WARN (AuthController): Federated credentials failure for subject http://test.com!http://sp.test.com!1234, incorrect credentials.
+--Output from redirect to federatederror when DisabledAccountException thrown--
+WARN (AuthController): Federated credentials failure for subject http://test.com!http://sp.test.com!1234, account disabled locally
+--Output from redirect to federatederror when AuthenticationException thrown--
+WARN (AuthController): Federated credentials failure for subject http://test.com!http://sp.test.com!1234, generic fault
+--Output from 403 when local is disabled for local login--
+ERROR (AuthController): Authentication diverted to local development/testing accounts but this mode is not enabled in configuration
+--Output from incomplete and redirect to federatedincomplete when principal not provided to locallogin--
+INFO (AuthController): Incomplete federated authentication attempt was aborted
+WARN (AuthController): Unique subject identifier (principal) was not presented
+WARN (AuthController): Internal SAML session identifier (credential) was not presented
+--Output from incomplete and redirect to federatedincomplete when credential not provided to locallogin--
+INFO (AuthController): Incomplete federated authentication attempt was aborted
+WARN (AuthController): Internal SAML session identifier (credential) was not presented
+--Output from redirect to root URI when all is valid and no target supplied to locallogin--
+INFO (AuthController): Successfully processed local development/testing authentication event for subject http://test.com!http://sp.test.com!1234 based on credential provided in 1234-mockid-5678, redirecting to content
+--Output from redirect to target URI when all is valid and target supplied to locallogin--
+INFO (AuthController): Successfully processed local development/testing authentication event for subject http://test.com!http://sp.test.com!1234 based on credential provided in 1234-mockid-5678, redirecting to content
+--Output from redirect to federatederror when IncorrectCredentialsException thrown in locallogin--
+WARN (AuthController): Local credentials failure for subject http://test.com!http://sp.test.com!1234, incorrect credentials.
+--Output from redirect to federatederror when DisabledAccountException thrown in locallogin--
+WARN (AuthController): Local credentials failure for subject http://test.com!http://sp.test.com!1234, account disabled locally
+--Output from redirect to federatederror when AuthenticationException thrown in locallogin--
+WARN (AuthController): Local credentials failure for subject http://test.com!http://sp.test.com!1234, generic fault
+]]></system-out>
+  <system-err><![CDATA[--Output from that login view will be rendered when automate login is disabled--
+--Output from that SP redirect will be invoked when autologin active--
+--Output from that logout will redirect to application root--
+--Output from Echo returns set attributes--
+--Output from Echo returns set headers--
+--Output from 403 when sp is disabled for federated login--
+--Output from incomplete and redirect to federatedincomplete when principal not provided--
+--Output from incomplete and redirect to federatedincomplete when credential not provided--
+--Output from redirect to root URI when all is valid and no target supplied--
+--Output from redirect to target URI when all is valid and target supplied--
+--Output from redirect to federatederror when IncorrectCredentialsException thrown--
+--Output from redirect to federatederror when DisabledAccountException thrown--
+--Output from redirect to federatederror when AuthenticationException thrown--
+--Output from 403 when local is disabled for local login--
+--Output from incomplete and redirect to federatedincomplete when principal not provided to locallogin--
+--Output from incomplete and redirect to federatedincomplete when credential not provided to locallogin--
+--Output from redirect to root URI when all is valid and no target supplied to locallogin--
+--Output from redirect to target URI when all is valid and target supplied to locallogin--
+--Output from redirect to federatederror when IncorrectCredentialsException thrown in locallogin--
+--Output from redirect to federatederror when DisabledAccountException thrown in locallogin--
+--Output from redirect to federatederror when AuthenticationException thrown in locallogin--
+]]></system-err>
+</testsuite>

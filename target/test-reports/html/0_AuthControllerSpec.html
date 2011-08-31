@@ -1,0 +1,143 @@
+<html xmlns:lxslt="http://xml.apache.org/xslt" xmlns:stringutils="xalan://org.apache.tools.ant.util.StringUtils">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>Unit Test Results: AuthControllerSpec</title>
+<link rel="stylesheet" type="text/css" title="Style" href="stylesheet.css">
+<script type="text/javascript" language="JavaScript">
+        var TestCases = new Array();
+        var cur;
+        
+    cur = TestCases['.AuthControllerSpec'] = new Array();
+    </script><script type="text/javascript" language="JavaScript">
+        function displayProperties (name) {
+          var win = window.open('','JUnitSystemProperties','scrollbars=1,resizable=1');
+          var doc = win.document;
+          doc.open();
+          doc.write("<html><head><title>Properties of " + name + "</title>");
+          doc.write("<style type=\"text/css\">");
+          doc.write("body {font:normal 68% verdana,arial,helvetica; color:#000000; }");
+          doc.write("table tr td, table tr th { font-size: 68%; }");
+          doc.write("table.properties { border-collapse:collapse; border-left:solid 1 #cccccc; border-top:solid 1 #cccccc; padding:5px; }");
+          doc.write("table.properties th { text-align:left; border-right:solid 1 #cccccc; border-bottom:solid 1 #cccccc; background-color:#eeeeee; }");
+          doc.write("table.properties td { font:normal; text-align:left; border-right:solid 1 #cccccc; border-bottom:solid 1 #cccccc; background-color:#fffffff; }");
+          doc.write("h3 { margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica }");
+          doc.write("</style>");
+          doc.write("</head><body>");
+          doc.write("<h3>Properties of " + name + "</h3>");
+          doc.write("<div align=\"right\"><a href=\"javascript:window.close();\">Close</a></div>");
+          doc.write("<table class='properties'>");
+          doc.write("<tr><th>Name</th><th>Value</th></tr>");
+          for (prop in TestCases[name]) {
+            doc.write("<tr><th>" + prop + "</th><td>" + TestCases[name][prop] + "</td></tr>");
+          }
+          doc.write("</table>");
+          doc.write("</body></html>");
+          doc.close();
+          win.focus();
+        }
+      
+      </script>
+</head>
+<body>
+<h1>Unit Test Results.</h1>
+<table width="100%">
+<tr>
+<td align="left"></td><td align="right">Designed for use with <a href="http://www.junit.org/">JUnit</a> and <a href="http://ant.apache.org/">Ant</a>.</td>
+</tr>
+</table>
+<hr size="1">
+<h3>Class AuthControllerSpec</h3>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th width="80%">Name</th><th>Tests</th><th>Errors</th><th>Failures</th><th nowrap>Time(s)</th><th nowrap>Time Stamp</th><th>Host</th>
+</tr>
+<tr valign="top" class="Pass">
+<td><a title="Display all tests" href="0_AuthControllerSpec.html">AuthControllerSpec</a></td><td><a title="Display all tests" href="0_AuthControllerSpec.html">21</a></td><td>0</td><td>0</td><td>2.510</td><td>2011-08-31T06:41:06</td><td>grails</td>
+</tr>
+</table>
+<h2>Tests</h2>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="that login view will be rendered when automate login is disabled"></a>that login view will be rendered when automate login is disabled</td><td>Success</td><td></td><td>0.954</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="that SP redirect will be invoked when autologin active"></a>that SP redirect will be invoked when autologin active</td><td>Success</td><td></td><td>0.096</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="that logout will redirect to application root"></a>that logout will redirect to application root</td><td>Success</td><td></td><td>0.134</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="Echo returns set attributes"></a>Echo returns set attributes</td><td>Success</td><td></td><td>0.076</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="Echo returns set headers"></a>Echo returns set headers</td><td>Success</td><td></td><td>0.074</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="403 when sp is disabled for federated login"></a>403 when sp is disabled for federated login</td><td>Success</td><td></td><td>0.062</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="incomplete and redirect to federatedincomplete when principal not provided"></a>incomplete and redirect to federatedincomplete when principal not provided</td><td>Success</td><td></td><td>0.112</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="incomplete and redirect to federatedincomplete when credential not provided"></a>incomplete and redirect to federatedincomplete when credential not provided</td><td>Success</td><td></td><td>0.130</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="redirect to root URI when all is valid and no target supplied"></a>redirect to root URI when all is valid and no target supplied</td><td>Success</td><td></td><td>0.138</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="redirect to target URI when all is valid and target supplied"></a>redirect to target URI when all is valid and target supplied</td><td>Success</td><td></td><td>0.075</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="redirect to federatederror when IncorrectCredentialsException thrown"></a>redirect to federatederror when IncorrectCredentialsException thrown</td><td>Success</td><td></td><td>0.073</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="redirect to federatederror when DisabledAccountException thrown"></a>redirect to federatederror when DisabledAccountException thrown</td><td>Success</td><td></td><td>0.066</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="redirect to federatederror when AuthenticationException thrown"></a>redirect to federatederror when AuthenticationException thrown</td><td>Success</td><td></td><td>0.043</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="403 when local is disabled for local login"></a>403 when local is disabled for local login</td><td>Success</td><td></td><td>0.028</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="incomplete and redirect to federatedincomplete when principal not provided to locallogin"></a>incomplete and redirect to federatedincomplete when principal not provided to locallogin</td><td>Success</td><td></td><td>0.072</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="incomplete and redirect to federatedincomplete when credential not provided to locallogin"></a>incomplete and redirect to federatedincomplete when credential not provided to locallogin</td><td>Success</td><td></td><td>0.069</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="redirect to root URI when all is valid and no target supplied to locallogin"></a>redirect to root URI when all is valid and no target supplied to locallogin</td><td>Success</td><td></td><td>0.038</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="redirect to target URI when all is valid and target supplied to locallogin"></a>redirect to target URI when all is valid and target supplied to locallogin</td><td>Success</td><td></td><td>0.076</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="redirect to federatederror when IncorrectCredentialsException thrown in locallogin"></a>redirect to federatederror when IncorrectCredentialsException thrown in locallogin</td><td>Success</td><td></td><td>0.046</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="redirect to federatederror when DisabledAccountException thrown in locallogin"></a>redirect to federatederror when DisabledAccountException thrown in locallogin</td><td>Success</td><td></td><td>0.051</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="redirect to federatederror when AuthenticationException thrown in locallogin"></a>redirect to federatederror when AuthenticationException thrown in locallogin</td><td>Success</td><td></td><td>0.052</td>
+</tr>
+</table>
+<div class="Properties">
+<a href="javascript:displayProperties('.AuthControllerSpec');">
+                    Properties &raquo;
+                </a>
+</div>
+<div class="Properties">
+<a href="./0_AuthControllerSpec-out.txt">
+                        System.out &raquo;
+                    </a>
+</div>
+<div class="Properties">
+<a href="./0_AuthControllerSpec-err.txt">
+                        System.err &raquo;
+                    </a>
+</div>
+</body>
+</html>

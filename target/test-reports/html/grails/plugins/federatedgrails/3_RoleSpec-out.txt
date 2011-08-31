@@ -1,0 +1,5 @@
+--Output from Ensure Role wont validate with null name--
+--Output from Ensure Role wont validate with blank name--
+--Output from Ensure Role wont validate with non-unique name--
+--Output from Ensure Role will validate--
+

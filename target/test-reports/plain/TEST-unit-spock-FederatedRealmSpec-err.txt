@@ -1,0 +1,8 @@
+--Output from UnknownAccountException when federated authentication is not enabled--
+--Output from UnknownAccountException when principal is not supplied--
+--Output from UnknownAccountException when credential is not supplied--
+--Output from DisabledAccountException when user doesnt already exist and autoprovision disabled--
+--Output from Basic account created when autoprovision is enabled--
+--Output from Existing, disabled account throws DisabledAccountException--
+--Output from Failing subject save for new account throws RuntimeException--
+--Output from Failing subject save for session record throws RuntimeException--

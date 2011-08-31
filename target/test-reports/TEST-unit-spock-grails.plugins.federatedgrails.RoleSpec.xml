@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="grails" name="grails.plugins.federatedgrails.RoleSpec" tests="4" time="0.098" timestamp="2011-08-31T06:41:10">
+  <properties />
+  <testcase classname="grails.plugins.federatedgrails.RoleSpec" name="Ensure Role wont validate with null name" time="0.026" />
+  <testcase classname="grails.plugins.federatedgrails.RoleSpec" name="Ensure Role wont validate with blank name" time="0.027" />
+  <testcase classname="grails.plugins.federatedgrails.RoleSpec" name="Ensure Role wont validate with non-unique name" time="0.02" />
+  <testcase classname="grails.plugins.federatedgrails.RoleSpec" name="Ensure Role will validate" time="0.02" />
+  <system-out><![CDATA[--Output from Ensure Role wont validate with null name--
+--Output from Ensure Role wont validate with blank name--
+--Output from Ensure Role wont validate with non-unique name--
+--Output from Ensure Role will validate--
+]]></system-out>
+  <system-err><![CDATA[--Output from Ensure Role wont validate with null name--
+--Output from Ensure Role wont validate with blank name--
+--Output from Ensure Role wont validate with non-unique name--
+--Output from Ensure Role will validate--
+]]></system-err>
+</testsuite>

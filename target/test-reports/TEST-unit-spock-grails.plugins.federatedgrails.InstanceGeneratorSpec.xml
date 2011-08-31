@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="grails" name="grails.plugins.federatedgrails.InstanceGeneratorSpec" tests="3" time="0.122" timestamp="2011-08-31T06:41:10">
+  <properties />
+  <testcase classname="grails.plugins.federatedgrails.InstanceGeneratorSpec" name="InstanceGenerator returns SubjectBase when no configuration supplied" time="0.021" />
+  <testcase classname="grails.plugins.federatedgrails.InstanceGeneratorSpec" name="InstanceGenerator returns TestSubject when configured as such" time="0.05" />
+  <testcase classname="grails.plugins.federatedgrails.InstanceGeneratorSpec" name="InstanceGenerator throws RuntimeException when invalid class set" time="0.047" />
+  <system-out><![CDATA[--Output from InstanceGenerator returns SubjectBase when no configuration supplied--
+--Output from InstanceGenerator returns TestSubject when configured as such--
+--Output from InstanceGenerator throws RuntimeException when invalid class set--
+]]></system-out>
+  <system-err><![CDATA[--Output from InstanceGenerator returns SubjectBase when no configuration supplied--
+--Output from InstanceGenerator returns TestSubject when configured as such--
+--Output from InstanceGenerator throws RuntimeException when invalid class set--
+]]></system-err>
+</testsuite>

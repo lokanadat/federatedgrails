@@ -1,0 +1,44 @@
+--Output from that login view will be rendered when automate login is disabled--
+--Output from that SP redirect will be invoked when autologin active--
+--Output from that logout will redirect to application root--
+INFO (AuthController): Signing out subject [1]http://test.com!http://sp.test.com!1234
+--Output from Echo returns set attributes--
+--Output from Echo returns set headers--
+--Output from 403 when sp is disabled for federated login--
+ERROR (AuthController): Attempt to do federated login when Apache SP is not marked active in local configuration
+--Output from incomplete and redirect to federatedincomplete when principal not provided--
+WARN (AuthController): Incomplete federated authentication attempt was aborted
+WARN (AuthController): Unique subject identifier (principal) was not presented
+WARN (AuthController): Internal SAML session identifier (credential) was not presented
+--Output from incomplete and redirect to federatedincomplete when credential not provided--
+WARN (AuthController): Incomplete federated authentication attempt was aborted
+WARN (AuthController): Internal SAML session identifier (credential) was not presented
+--Output from redirect to root URI when all is valid and no target supplied--
+INFO (AuthController): Successfully processed federation based authentication event for subject http://test.com!http://sp.test.com!1234 based on credential provided in 1234-mockid-5678, redirecting to content
+--Output from redirect to target URI when all is valid and target supplied--
+INFO (AuthController): Successfully processed federation based authentication event for subject http://test.com!http://sp.test.com!1234 based on credential provided in 1234-mockid-5678, redirecting to content
+--Output from redirect to federatederror when IncorrectCredentialsException thrown--
+WARN (AuthController): Federated credentials failure for subject http://test.com!http://sp.test.com!1234, incorrect credentials.
+--Output from redirect to federatederror when DisabledAccountException thrown--
+WARN (AuthController): Federated credentials failure for subject http://test.com!http://sp.test.com!1234, account disabled locally
+--Output from redirect to federatederror when AuthenticationException thrown--
+WARN (AuthController): Federated credentials failure for subject http://test.com!http://sp.test.com!1234, generic fault
+--Output from 403 when local is disabled for local login--
+ERROR (AuthController): Authentication diverted to local development/testing accounts but this mode is not enabled in configuration
+--Output from incomplete and redirect to federatedincomplete when principal not provided to locallogin--
+INFO (AuthController): Incomplete federated authentication attempt was aborted
+WARN (AuthController): Unique subject identifier (principal) was not presented
+WARN (AuthController): Internal SAML session identifier (credential) was not presented
+--Output from incomplete and redirect to federatedincomplete when credential not provided to locallogin--
+INFO (AuthController): Incomplete federated authentication attempt was aborted
+WARN (AuthController): Internal SAML session identifier (credential) was not presented
+--Output from redirect to root URI when all is valid and no target supplied to locallogin--
+INFO (AuthController): Successfully processed local development/testing authentication event for subject http://test.com!http://sp.test.com!1234 based on credential provided in 1234-mockid-5678, redirecting to content
+--Output from redirect to target URI when all is valid and target supplied to locallogin--
+INFO (AuthController): Successfully processed local development/testing authentication event for subject http://test.com!http://sp.test.com!1234 based on credential provided in 1234-mockid-5678, redirecting to content
+--Output from redirect to federatederror when IncorrectCredentialsException thrown in locallogin--
+WARN (AuthController): Local credentials failure for subject http://test.com!http://sp.test.com!1234, incorrect credentials.
+--Output from redirect to federatederror when DisabledAccountException thrown in locallogin--
+WARN (AuthController): Local credentials failure for subject http://test.com!http://sp.test.com!1234, account disabled locally
+--Output from redirect to federatederror when AuthenticationException thrown in locallogin--
+WARN (AuthController): Local credentials failure for subject http://test.com!http://sp.test.com!1234, generic fault

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="grails" name="grails.plugins.federatedgrails.SessionRecordSpec" tests="6" time="0.1" timestamp="2011-08-31T06:41:10">
+  <properties />
+  <testcase classname="grails.plugins.federatedgrails.SessionRecordSpec" name="Ensure SessionRecord wont validate with null credential" time="0.038" />
+  <testcase classname="grails.plugins.federatedgrails.SessionRecordSpec" name="Ensure SessionRecord wont validate with blank credential" time="0.01" />
+  <testcase classname="grails.plugins.federatedgrails.SessionRecordSpec" name="Ensure SessionRecord wont validate null remoteHost credential" time="0.017" />
+  <testcase classname="grails.plugins.federatedgrails.SessionRecordSpec" name="Ensure SessionRecord wont validate with blank remoteHost" time="0.015" />
+  <testcase classname="grails.plugins.federatedgrails.SessionRecordSpec" name="Ensure SessionRecord wont validate null userAgent credential" time="0.007" />
+  <testcase classname="grails.plugins.federatedgrails.SessionRecordSpec" name="Ensure SessionRecord wont validate with blank userAgent" time="0.008" />
+  <system-out><![CDATA[--Output from Ensure SessionRecord wont validate with null credential--
+--Output from Ensure SessionRecord wont validate with blank credential--
+--Output from Ensure SessionRecord wont validate null remoteHost credential--
+--Output from Ensure SessionRecord wont validate with blank remoteHost--
+--Output from Ensure SessionRecord wont validate null userAgent credential--
+--Output from Ensure SessionRecord wont validate with blank userAgent--
+]]></system-out>
+  <system-err><![CDATA[--Output from Ensure SessionRecord wont validate with null credential--
+--Output from Ensure SessionRecord wont validate with blank credential--
+--Output from Ensure SessionRecord wont validate null remoteHost credential--
+--Output from Ensure SessionRecord wont validate with blank remoteHost--
+--Output from Ensure SessionRecord wont validate null userAgent credential--
+--Output from Ensure SessionRecord wont validate with blank userAgent--
+]]></system-err>
+</testsuite>
