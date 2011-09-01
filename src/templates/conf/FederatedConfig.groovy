@@ -4,8 +4,9 @@ Specifies configuration to allow Shiro to interact with Shibboleth service provi
 */
 
 federation {
+  enabled = true
   automatelogin = false
-  federationaction = false
+  federationactive = false
   developmentactive = false
   autoprovision = false
   

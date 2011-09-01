@@ -4,14 +4,15 @@ Specifies configuration to allow Shiro to interact with Shibboleth service provi
 */
 
 federation {
+  enabled = true
   automatelogin = false
-  federationaction = false
+  federationactive = true
   developmentactive = true
-  autoprovision = false
+  autoprovision = true
   
   // Supported as fallback for problematic webservers but should usually be true
   // See https://wiki.shibboleth.net/confluence/display/SHIB2/NativeSPAttributeAccess for more
-  request.attributes = true 
+  request.attributes = false 
   ssoendpoint = "/Shibboleth.sso/Login"
   
   // The subject class being utilized by the host application

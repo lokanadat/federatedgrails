@@ -1,4 +1,0 @@
---Output from InstanceGenerator returns SubjectBase when no configuration supplied--
---Output from InstanceGenerator returns TestSubject when configured as such--
---Output from InstanceGenerator throws RuntimeException when invalid class set--
-
