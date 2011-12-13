@@ -17,6 +17,7 @@ import grails.plugins.federatedgrails.SubjectBase
 import grails.plugins.federatedgrails.SessionRecord
 import grails.plugins.federatedgrails.FederatedToken
 import grails.plugins.federatedgrails.Role
+import grails.plugins.federatedgrails.Permission
 
 class DatabaseRealmSpec extends IntegrationSpec {
   
@@ -90,7 +91,7 @@ class DatabaseRealmSpec extends IntegrationSpec {
     def realm = new DatabaseRealm()
     realm.shiroPermissionResolver = new WildcardPermissionResolver()
     def subject = new SubjectBase(principal:'http://test.com!http://sp.test.com!1234').save()
-    subject.addToPermissions("test:domain:action:id")
+    subject.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain:action:id")))
     subject.save()
     
     when:
@@ -105,7 +106,7 @@ class DatabaseRealmSpec extends IntegrationSpec {
     def realm = new DatabaseRealm()
     realm.shiroPermissionResolver = new WildcardPermissionResolver()
     def subject = new SubjectBase(principal:'http://test.com!http://sp.test.com!1234').save()
-    subject.addToPermissions("test:domain:action:id")
+    subject.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain:action:id")))
     subject.save()
     
     when:
@@ -120,7 +121,7 @@ class DatabaseRealmSpec extends IntegrationSpec {
     def realm = new DatabaseRealm()
     realm.shiroPermissionResolver = new WildcardPermissionResolver()
     def subject = new SubjectBase(principal:'http://test.com!http://sp.test.com!1234').save()
-    subject.addToPermissions("test:domain:*")
+    subject.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain:*")))
     subject.save()
     
     when:
@@ -135,7 +136,7 @@ class DatabaseRealmSpec extends IntegrationSpec {
     def realm = new DatabaseRealm()
     realm.shiroPermissionResolver = new WildcardPermissionResolver()
     def subject = new SubjectBase(principal:'http://test.com!http://sp.test.com!1234').save()
-    subject.addToPermissions("test:domain:*")
+    subject.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain:*")))
     subject.save()
     
     when:
@@ -152,7 +153,7 @@ class DatabaseRealmSpec extends IntegrationSpec {
     def subject = new SubjectBase(principal:'http://test.com!http://sp.test.com!1234').save()
     def role = new Role(name:'testrole').save()
     role.addToSubjects(subject)
-    role.addToPermissions("test:domain:action:id")
+    role.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain:action:id")))
     role.save()
     
     when:
@@ -169,7 +170,7 @@ class DatabaseRealmSpec extends IntegrationSpec {
     def subject = new SubjectBase(principal:'http://test.com!http://sp.test.com!1234').save()
     def role = new Role(name:'testrole').save()
     role.addToSubjects(subject)
-    role.addToPermissions("test:domain:action:id")
+    role.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain:action:id")))
     role.save()
     
     when:
@@ -184,11 +185,11 @@ class DatabaseRealmSpec extends IntegrationSpec {
     def realm = new DatabaseRealm()
     realm.shiroPermissionResolver = new WildcardPermissionResolver()
     def subject = new SubjectBase(principal:'http://test.com!http://sp.test.com!1234').save()
-    subject.addToPermissions("test:domain:action:id")
+    subject.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain:action:id")))
     subject.save()
     def role = new Role(name:'testrole').save()
     role.addToSubjects(subject)
-    role.addToPermissions("test:domain:action:id")
+    role.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain:action:id")))
     role.save()
     
     when:
@@ -205,7 +206,7 @@ class DatabaseRealmSpec extends IntegrationSpec {
     def subject = new SubjectBase(principal:'http://test.com!http://sp.test.com!1234').save()
     def role = new Role(name:'testrole').save()
     role.addToSubjects(subject)
-    role.addToPermissions("test:domain:action:*")
+    role.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain:action:*")))
     role.save()
     
     when:
@@ -222,7 +223,7 @@ class DatabaseRealmSpec extends IntegrationSpec {
     def subject = new SubjectBase(principal:'http://test.com!http://sp.test.com!1234').save()
     def role = new Role(name:'testrole').save()
     role.addToSubjects(subject)
-    role.addToPermissions("test:domain:*")
+    role.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain:*")))
     role.save()
     
     when:
@@ -237,11 +238,11 @@ class DatabaseRealmSpec extends IntegrationSpec {
     def realm = new DatabaseRealm()
     realm.shiroPermissionResolver = new WildcardPermissionResolver()
     def subject = new SubjectBase(principal:'http://test.com!http://sp.test.com!1234').save()
-    subject.addToPermissions("test:domain:action:*")
+    subject.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain:action:*")))
     subject.save()
     def role = new Role(name:'testrole').save()
     role.addToSubjects(subject)
-    role.addToPermissions("test:domain:action:*")
+    role.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain:action:*")))
     role.save()
     
     when:
@@ -256,17 +257,17 @@ class DatabaseRealmSpec extends IntegrationSpec {
     def realm = new DatabaseRealm()
     realm.shiroPermissionResolver = new WildcardPermissionResolver()
     def subject = new SubjectBase(principal:'http://test.com!http://sp.test.com!1234').save()
-    subject.addToPermissions("test:domain:action:id")
-    subject.addToPermissions("test:otherdomain:action:*")
-    subject.addToPermissions("test:otherdomain2:action:*")
-    subject.addToPermissions("test:domain:action:read")
+    subject.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain:action:id")))
+    subject.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:otherdomain:action:*")))
+    subject.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:otherdomain2:action:*")))
+    subject.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain:action:read")))
     subject.save()
     def role = new Role(name:'testrole').save()
     role.addToSubjects(subject)
-    role.addToPermissions("test:domain:action:*")
-    role.addToPermissions("test:domain:action:id")
-    role.addToPermissions("test:otherdomain:action:*")
-    role.addToPermissions("test:otherdomain2:action:*")
+    role.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain:action:*")))
+    role.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain:action:id")))
+    role.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:otherdomain:action:*")))
+    role.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:otherdomain2:action:*")))
     role.save()
     
     when:
@@ -281,29 +282,29 @@ class DatabaseRealmSpec extends IntegrationSpec {
     def realm = new DatabaseRealm()
     realm.shiroPermissionResolver = new WildcardPermissionResolver()
     def subject = new SubjectBase(principal:'http://test.com!http://sp.test.com!1234').save()
-    subject.addToPermissions("test:domain:action:id")
+    subject.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain:action:id")))
     subject.save()
     def role = new Role(name:'testrole').save()
     role.addToSubjects(subject)
-    role.addToPermissions("test:domain:action:id")
-    role.addToPermissions("test:otherdomain:action:*")
-    role.addToPermissions("test:otherdomain:action:*")
+    role.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain:action:id")))
+    role.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:otherdomain:action:*")))
+    role.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:otherdomain:action:*")))
     role.save()
     
     def role2 = new Role(name:'testrole2').save()
     role2.addToSubjects(subject)
-    role2.addToPermissions("test:domain2:action:*")
-    role2.addToPermissions("test:domain2:action:id")
-    role2.addToPermissions("test:otherdomain2:action:*")
-    role2.addToPermissions("test:otherdomain2:action:*")
+    role2.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain2:action:*")))
+    role2.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain2:action:id")))
+    role2.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:otherdomain2:action:*")))
+    role2.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:otherdomain2:action:*")))
     role2.save()
     
     def role3 = new Role(name:'testrole3').save()
     role3.addToSubjects(subject)
-    role3.addToPermissions("test:domain3:action:*")
-    role3.addToPermissions("test:domain3:action:id")
-    role3.addToPermissions("test:otherdomain3:action:*")
-    role3.addToPermissions("test:domain:action:read")
+    role3.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain3:action:*")))
+    role3.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain3:action:id")))
+    role3.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:otherdomain3:action:*")))
+    role3.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain:action:read")))
     role3.save()
     
     when:
@@ -318,29 +319,29 @@ class DatabaseRealmSpec extends IntegrationSpec {
     def realm = new DatabaseRealm()
     realm.shiroPermissionResolver = new WildcardPermissionResolver()
     def subject = new SubjectBase(principal:'http://test.com!http://sp.test.com!1234').save()
-    subject.addToPermissions("test:domain:action:id")
+    subject.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain:action:id")))
     subject.save()
     def role = new Role(name:'testrole').save()
     role.addToSubjects(subject)
-    role.addToPermissions("test:domain:action:id")
-    role.addToPermissions("test:otherdomain:action:*")
-    role.addToPermissions("test:otherdomain:action:*")
+    role.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain:action:id")))
+    role.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:otherdomain:action:*")))
+    role.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:otherdomain:action:*")))
     role.save()
     
     def role2 = new Role(name:'testrole2').save()
     role2.addToSubjects(subject)
-    role2.addToPermissions("test:domain2:action:*")
-    role2.addToPermissions("test:domain2:action:id")
-    role2.addToPermissions("test:otherdomain2:action:*")
-    role2.addToPermissions("test:otherdomain2:action:*")
+    role2.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain2:action:*")))
+    role2.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain2:action:id")))
+    role2.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:otherdomain2:action:*")))
+    role2.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:otherdomain2:action:*")))
     role2.save()
     
     def role3 = new Role(name:'testrole3').save()
     role3.addToSubjects(subject)
-    role3.addToPermissions("test:domain3:action:*")
-    role3.addToPermissions("test:domain3:action:id")
-    role3.addToPermissions("test:otherdomain3:action:*")
-    role3.addToPermissions("test:domain:action:read")
+    role3.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain3:action:*")))
+    role3.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain3:action:id")))
+    role3.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:otherdomain3:action:*")))
+    role3.addToPermissions(new Permission(type:Permission.defaultPerm, target:("test:domain:action:read")))
     role3.save()
     
     when:

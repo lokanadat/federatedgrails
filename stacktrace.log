@@ -1,0 +1,246 @@
+2011-12-13 14:05:36,619 [main] ERROR StackTrace  - Sanitizing stacktrace:
+java.lang.NullPointerException: Cannot invoke method addToSubjects() on null object
+	at DatabaseRealmSpec.positive result when subject has the required role(DatabaseRealmSpec.groovy:28)
+2011-12-13 14:05:36,621 [main] ERROR StackTrace  - Sanitizing stacktrace:
+java.lang.NullPointerException: Cannot invoke method addToSubjects() on null object
+	at DatabaseRealmSpec.positive result when subject has the required role(DatabaseRealmSpec.groovy:28)
+2011-12-13 14:05:36,653 [main] ERROR StackTrace  - Sanitizing stacktrace:
+java.lang.NullPointerException: Cannot invoke method addToSubjects() on null object
+	at DatabaseRealmSpec.negative result when subject doesnt have the required role(DatabaseRealmSpec.groovy:43)
+2011-12-13 14:05:36,654 [main] ERROR StackTrace  - Sanitizing stacktrace:
+java.lang.NullPointerException: Cannot invoke method addToSubjects() on null object
+	at DatabaseRealmSpec.negative result when subject doesnt have the required role(DatabaseRealmSpec.groovy:43)
+2011-12-13 14:05:36,671 [main] ERROR StackTrace  - Sanitizing stacktrace:
+java.lang.NullPointerException: Cannot invoke method addToSubjects() on null object
+	at DatabaseRealmSpec.positive result when subject has all the required roles(DatabaseRealmSpec.groovy:58)
+2011-12-13 14:05:36,671 [main] ERROR StackTrace  - Sanitizing stacktrace:
+java.lang.NullPointerException: Cannot invoke method addToSubjects() on null object
+	at DatabaseRealmSpec.positive result when subject has all the required roles(DatabaseRealmSpec.groovy:58)
+2011-12-13 14:05:36,688 [main] ERROR StackTrace  - Sanitizing stacktrace:
+java.lang.NullPointerException: Cannot invoke method addToSubjects() on null object
+	at DatabaseRealmSpec.negative result when subject doesnt have all the required roles(DatabaseRealmSpec.groovy:77)
+2011-12-13 14:05:36,689 [main] ERROR StackTrace  - Sanitizing stacktrace:
+java.lang.NullPointerException: Cannot invoke method addToSubjects() on null object
+	at DatabaseRealmSpec.negative result when subject doesnt have all the required roles(DatabaseRealmSpec.groovy:77)
+2011-12-13 14:05:36,710 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin.addRelationshipManagementMethods_closure21(DomainClassGrailsPlugin.groovy:234)
+	at DatabaseRealmSpec.positive result when subject has directly assigned permission(DatabaseRealmSpec.groovy:93)
+2011-12-13 14:05:36,807 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at DatabaseRealmSpec.positive result when subject has directly assigned permission(DatabaseRealmSpec.groovy:93)
+2011-12-13 14:05:36,844 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin.addRelationshipManagementMethods_closure21(DomainClassGrailsPlugin.groovy:234)
+	at DatabaseRealmSpec.negative result when subject isnt directly assigned permission(DatabaseRealmSpec.groovy:108)
+2011-12-13 14:05:36,854 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at DatabaseRealmSpec.negative result when subject isnt directly assigned permission(DatabaseRealmSpec.groovy:108)
+2011-12-13 14:05:36,904 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:*]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin.addRelationshipManagementMethods_closure21(DomainClassGrailsPlugin.groovy:234)
+	at DatabaseRealmSpec.positive result when subject has wildcard assigned permission(DatabaseRealmSpec.groovy:123)
+2011-12-13 14:05:36,931 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:*]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at DatabaseRealmSpec.positive result when subject has wildcard assigned permission(DatabaseRealmSpec.groovy:123)
+2011-12-13 14:05:36,954 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:*]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin.addRelationshipManagementMethods_closure21(DomainClassGrailsPlugin.groovy:234)
+	at DatabaseRealmSpec.negative result when subject isnt wildcard assigned permission(DatabaseRealmSpec.groovy:138)
+2011-12-13 14:05:36,968 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:*]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at DatabaseRealmSpec.negative result when subject isnt wildcard assigned permission(DatabaseRealmSpec.groovy:138)
+2011-12-13 14:05:37,033 [main] ERROR StackTrace  - Sanitizing stacktrace:
+java.lang.NullPointerException: Cannot invoke method addToSubjects() on null object
+	at DatabaseRealmSpec.positive result when subject has role that has directly assigned permission(DatabaseRealmSpec.groovy:154)
+2011-12-13 14:05:37,033 [main] ERROR StackTrace  - Sanitizing stacktrace:
+java.lang.NullPointerException: Cannot invoke method addToSubjects() on null object
+	at DatabaseRealmSpec.positive result when subject has role that has directly assigned permission(DatabaseRealmSpec.groovy:154)
+2011-12-13 14:05:37,065 [main] ERROR StackTrace  - Sanitizing stacktrace:
+java.lang.NullPointerException: Cannot invoke method addToSubjects() on null object
+	at DatabaseRealmSpec.negative result when subject has role but neither are directly assigned permission(DatabaseRealmSpec.groovy:171)
+2011-12-13 14:05:37,065 [main] ERROR StackTrace  - Sanitizing stacktrace:
+java.lang.NullPointerException: Cannot invoke method addToSubjects() on null object
+	at DatabaseRealmSpec.negative result when subject has role but neither are directly assigned permission(DatabaseRealmSpec.groovy:171)
+2011-12-13 14:05:37,122 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin.addRelationshipManagementMethods_closure21(DomainClassGrailsPlugin.groovy:234)
+	at DatabaseRealmSpec.positive result when subject and role have directly assigned permission(DatabaseRealmSpec.groovy:187)
+2011-12-13 14:05:37,124 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at DatabaseRealmSpec.positive result when subject and role have directly assigned permission(DatabaseRealmSpec.groovy:187)
+2011-12-13 14:05:37,181 [main] ERROR StackTrace  - Sanitizing stacktrace:
+java.lang.NullPointerException: Cannot invoke method addToSubjects() on null object
+	at DatabaseRealmSpec.positive result when subject has role that has wildcard assigned permission(DatabaseRealmSpec.groovy:207)
+2011-12-13 14:05:37,181 [main] ERROR StackTrace  - Sanitizing stacktrace:
+java.lang.NullPointerException: Cannot invoke method addToSubjects() on null object
+	at DatabaseRealmSpec.positive result when subject has role that has wildcard assigned permission(DatabaseRealmSpec.groovy:207)
+2011-12-13 14:05:37,215 [main] ERROR StackTrace  - Sanitizing stacktrace:
+java.lang.NullPointerException: Cannot invoke method addToSubjects() on null object
+	at DatabaseRealmSpec.negative result when subject has role but neither are wildcard assigned permission(DatabaseRealmSpec.groovy:224)
+2011-12-13 14:05:37,216 [main] ERROR StackTrace  - Sanitizing stacktrace:
+java.lang.NullPointerException: Cannot invoke method addToSubjects() on null object
+	at DatabaseRealmSpec.negative result when subject has role but neither are wildcard assigned permission(DatabaseRealmSpec.groovy:224)
+2011-12-13 14:05:37,232 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:*]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin.addRelationshipManagementMethods_closure21(DomainClassGrailsPlugin.groovy:234)
+	at DatabaseRealmSpec.positive result when subject and role have wildcard assigned permission(DatabaseRealmSpec.groovy:240)
+2011-12-13 14:05:37,234 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:*]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at DatabaseRealmSpec.positive result when subject and role have wildcard assigned permission(DatabaseRealmSpec.groovy:240)
+2011-12-13 14:05:37,254 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin.addRelationshipManagementMethods_closure21(DomainClassGrailsPlugin.groovy:234)
+	at DatabaseRealmSpec.positive result when subject and role have multiple permissions only 1 of which matches(DatabaseRealmSpec.groovy:259)
+2011-12-13 14:05:37,259 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at DatabaseRealmSpec.positive result when subject and role have multiple permissions only 1 of which matches(DatabaseRealmSpec.groovy:259)
+2011-12-13 14:05:37,276 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin.addRelationshipManagementMethods_closure21(DomainClassGrailsPlugin.groovy:234)
+	at DatabaseRealmSpec.positive result when subject has multiple roles that have multiple permissions only 1 of which matches(DatabaseRealmSpec.groovy:284)
+2011-12-13 14:05:37,297 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at DatabaseRealmSpec.positive result when subject has multiple roles that have multiple permissions only 1 of which matches(DatabaseRealmSpec.groovy:284)
+2011-12-13 14:05:37,319 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin.addRelationshipManagementMethods_closure21(DomainClassGrailsPlugin.groovy:234)
+	at DatabaseRealmSpec.negative result when subject has multiple roles that have multiple permissions of which none match(DatabaseRealmSpec.groovy:321)
+2011-12-13 14:05:37,321 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at DatabaseRealmSpec.negative result when subject has multiple roles that have multiple permissions of which none match(DatabaseRealmSpec.groovy:321)
+2011-12-13 14:09:54,226 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin.addRelationshipManagementMethods_closure21(DomainClassGrailsPlugin.groovy:234)
+	at DatabaseRealmSpec.positive result when subject has directly assigned permission(DatabaseRealmSpec.groovy:93)
+2011-12-13 14:09:54,366 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at DatabaseRealmSpec.positive result when subject has directly assigned permission(DatabaseRealmSpec.groovy:93)
+2011-12-13 14:09:54,401 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin.addRelationshipManagementMethods_closure21(DomainClassGrailsPlugin.groovy:234)
+	at DatabaseRealmSpec.negative result when subject isnt directly assigned permission(DatabaseRealmSpec.groovy:108)
+2011-12-13 14:09:54,413 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at DatabaseRealmSpec.negative result when subject isnt directly assigned permission(DatabaseRealmSpec.groovy:108)
+2011-12-13 14:09:54,457 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:*]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin.addRelationshipManagementMethods_closure21(DomainClassGrailsPlugin.groovy:234)
+	at DatabaseRealmSpec.positive result when subject has wildcard assigned permission(DatabaseRealmSpec.groovy:123)
+2011-12-13 14:09:54,475 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:*]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at DatabaseRealmSpec.positive result when subject has wildcard assigned permission(DatabaseRealmSpec.groovy:123)
+2011-12-13 14:09:54,505 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:*]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin.addRelationshipManagementMethods_closure21(DomainClassGrailsPlugin.groovy:234)
+	at DatabaseRealmSpec.negative result when subject isnt wildcard assigned permission(DatabaseRealmSpec.groovy:138)
+2011-12-13 14:09:54,520 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:*]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at DatabaseRealmSpec.negative result when subject isnt wildcard assigned permission(DatabaseRealmSpec.groovy:138)
+2011-12-13 14:09:54,576 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.Role.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin.addRelationshipManagementMethods_closure21(DomainClassGrailsPlugin.groovy:234)
+	at DatabaseRealmSpec.positive result when subject has role that has directly assigned permission(DatabaseRealmSpec.groovy:155)
+2011-12-13 14:09:54,590 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.Role.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at DatabaseRealmSpec.positive result when subject has role that has directly assigned permission(DatabaseRealmSpec.groovy:155)
+2011-12-13 14:09:54,627 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.Role.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin.addRelationshipManagementMethods_closure21(DomainClassGrailsPlugin.groovy:234)
+	at DatabaseRealmSpec.negative result when subject has role but neither are directly assigned permission(DatabaseRealmSpec.groovy:172)
+2011-12-13 14:09:54,652 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.Role.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at DatabaseRealmSpec.negative result when subject has role but neither are directly assigned permission(DatabaseRealmSpec.groovy:172)
+2011-12-13 14:09:54,674 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin.addRelationshipManagementMethods_closure21(DomainClassGrailsPlugin.groovy:234)
+	at DatabaseRealmSpec.positive result when subject and role have directly assigned permission(DatabaseRealmSpec.groovy:187)
+2011-12-13 14:09:54,680 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at DatabaseRealmSpec.positive result when subject and role have directly assigned permission(DatabaseRealmSpec.groovy:187)
+2011-12-13 14:09:54,705 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.Role.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:*]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin.addRelationshipManagementMethods_closure21(DomainClassGrailsPlugin.groovy:234)
+	at DatabaseRealmSpec.positive result when subject has role that has wildcard assigned permission(DatabaseRealmSpec.groovy:208)
+2011-12-13 14:09:54,719 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.Role.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:*]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at DatabaseRealmSpec.positive result when subject has role that has wildcard assigned permission(DatabaseRealmSpec.groovy:208)
+2011-12-13 14:09:54,752 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.Role.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:*]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin.addRelationshipManagementMethods_closure21(DomainClassGrailsPlugin.groovy:234)
+	at DatabaseRealmSpec.negative result when subject has role but neither are wildcard assigned permission(DatabaseRealmSpec.groovy:225)
+2011-12-13 14:09:54,755 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.Role.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:*]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at DatabaseRealmSpec.negative result when subject has role but neither are wildcard assigned permission(DatabaseRealmSpec.groovy:225)
+2011-12-13 14:09:54,767 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:*]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin.addRelationshipManagementMethods_closure21(DomainClassGrailsPlugin.groovy:234)
+	at DatabaseRealmSpec.positive result when subject and role have wildcard assigned permission(DatabaseRealmSpec.groovy:240)
+2011-12-13 14:09:54,770 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:*]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at DatabaseRealmSpec.positive result when subject and role have wildcard assigned permission(DatabaseRealmSpec.groovy:240)
+2011-12-13 14:09:54,786 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin.addRelationshipManagementMethods_closure21(DomainClassGrailsPlugin.groovy:234)
+	at DatabaseRealmSpec.positive result when subject and role have multiple permissions only 1 of which matches(DatabaseRealmSpec.groovy:259)
+2011-12-13 14:09:54,788 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at DatabaseRealmSpec.positive result when subject and role have multiple permissions only 1 of which matches(DatabaseRealmSpec.groovy:259)
+2011-12-13 14:09:54,804 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin.addRelationshipManagementMethods_closure21(DomainClassGrailsPlugin.groovy:234)
+	at DatabaseRealmSpec.positive result when subject has multiple roles that have multiple permissions only 1 of which matches(DatabaseRealmSpec.groovy:284)
+2011-12-13 14:09:54,806 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at DatabaseRealmSpec.positive result when subject has multiple roles that have multiple permissions only 1 of which matches(DatabaseRealmSpec.groovy:284)
+2011-12-13 14:09:54,821 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at org.codehaus.groovy.grails.plugins.DomainClassGrailsPlugin.addRelationshipManagementMethods_closure21(DomainClassGrailsPlugin.groovy:234)
+	at DatabaseRealmSpec.negative result when subject has multiple roles that have multiple permissions of which none match(DatabaseRealmSpec.groovy:321)
+2011-12-13 14:09:54,824 [main] ERROR StackTrace  - Sanitizing stacktrace:
+groovy.lang.MissingMethodException: No signature of method: grails.plugins.federatedgrails.SubjectBase.addToPermissions() is applicable for argument types: (java.lang.String) values: [test:domain:action:id]
+Possible solutions: addToPermissions(java.lang.Object), getPermissions()
+	at DatabaseRealmSpec.negative result when subject has multiple roles that have multiple permissions of which none match(DatabaseRealmSpec.groovy:321)

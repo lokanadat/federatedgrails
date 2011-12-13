@@ -3,8 +3,6 @@ package grails.plugins.federatedgrails
 class SubjectBase {    
 
   String principal
-  Map attributes = [:]
-  
   boolean enabled
   
   static belongsTo = grails.plugins.federatedgrails.Role
@@ -12,7 +10,7 @@ class SubjectBase {
   static hasMany = [ 
     sessionRecords: SessionRecord, 
     roles: Role, 
-    permissions: String 
+    permissions: Permission 
   ]
 
   static constraints = {

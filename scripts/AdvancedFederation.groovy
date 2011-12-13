@@ -7,7 +7,7 @@ target ( default : 'Enhances the amount of customization a project has over Fede
 	// Controllers
 	copy( todir: "${basedir}/grails-app/controllers" , overwrite: false ) { fileset ( dir : "${federatedGrailsPluginDir}/grails-app/controllers" ) }
 
-  	// Realms
-  	copy( todir: "${basedir}/grails-app/realms" , overwrite: false ) { fileset ( dir : "${federatedGrailsPluginDir}/grails-app/realms" ) }
+  // Realms
+  copy( todir: "${basedir}/grails-app/realms" , overwrite: false ) { fileset ( dir : "${federatedGrailsPluginDir}/grails-app/realms" ) }
 
 }

@@ -63,25 +63,31 @@ as its internal authentication and access control layer.
     }
 
   // Supplies the authenticated subject object
-    private void injectAuthn(def clazz, GrailsApplication grailsApplication) {
+  private void injectAuthn(def clazz, GrailsApplication grailsApplication) {
     def config = grailsApplication.config
-        GroovyClassLoader classLoader = new GroovyClassLoader(getClass().classLoader)
+    GroovyClassLoader classLoader = new GroovyClassLoader(getClass().classLoader)
 
     clazz.metaClass.getPrincipal = {
-          def subject = SecurityUtils.getSubject()
-        }
-       clazz.metaClass.getSubject = {
-
-      def subject = null
-          def principal = SecurityUtils.subject?.principal
+      def subject = SecurityUtils.getSubject()
+    }
       
+    clazz.metaClass.getSubject = {
+      def subject = null
+      def principal = SecurityUtils.subject?.principal
+
       if(principal) {
-        if(config.federation.app.subject)
-            subject = classLoader.loadClass(config.federation.app.subject).get(principal)
-          else
-            subject = SubjectBase.get(principal)
-      }
+        if(config.federation.app.subject) {
+          subject = classLoader.loadClass(config.federation.app.subject).get(principal)
+          log.debug "returning $subject"
+          subject
         }
+        else{
+          subject = SubjectBase.get(principal)
+          log.debug "returning base $subject"
+          subject
+        }
+      }
+    }
   }
   
   // Allows federation configuration to be seperately maintained in client app
