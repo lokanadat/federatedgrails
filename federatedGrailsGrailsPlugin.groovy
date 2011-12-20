@@ -6,8 +6,8 @@ import org.apache.shiro.SecurityUtils
 import grails.plugins.federatedgrails.SubjectBase
 
 class federatedGrailsGrailsPlugin {
- 
-  def version = "0.1"
+    def observe = ['controllers', 'services', 'filters'] 
+    def version = "0.1"
     def grailsVersion = "1.3.7 > *"
     def dependsOn = [shiro:"1.1.3"]
 
@@ -33,30 +33,31 @@ as its internal authentication and access control layer.
     }
 
     def doWithDynamicMethods = { ctx ->
-        // Supply authenticated subject to filters
-    application.filtersClasses.each { filter ->
-      // Should be used after verified call to 'accessControl'
-      log.debug "Injecting subject access methods to Filter ${filter}" 
-      injectAuthn(filter, application)      
-    }
+      // Supply authenticated subject to filters
+      application.filtersClasses.each { filter ->
+        // Should be used after verified call to 'accessControl'
+        log.debug "Injecting subject access methods to Filter ${filter}" 
+        injectAuthn(filter, application)      
+      }
 
-        // Supply authenticated subject to controllers
-        application.controllerClasses?.each { controller ->
-      log.debug "Injecting subject access methods to Controller ${controller}"
-      injectAuthn(controller, application)
-        }
+      // Supply authenticated subject to controllers
+      application.controllerClasses?.each { controller ->
+        log.debug "Injecting subject access methods to Controller ${controller}"
+        injectAuthn(controller, application)
+      }
 
-        // Supply authenticated subject to services
-        application.serviceClasses?.each { service ->
-      log.debug "Injecting subject access methods to Service ${service}"
-      injectAuthn(service, application)
-        }
+      // Supply authenticated subject to services
+      application.serviceClasses?.each { service ->
+        log.debug "Injecting subject access methods to Service ${service}"
+        injectAuthn(service, application)
+      }
     }
 
     def doWithApplicationContext = { applicationContext ->
     }
 
     def onChange = { event ->
+      injectAuthn(event.source, event.application)
     }
 
     def onConfigChange = { event ->
