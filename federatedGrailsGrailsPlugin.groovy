@@ -35,21 +35,18 @@ as its internal authentication and access control layer.
     def doWithDynamicMethods = { ctx ->
       // Supply authenticated subject to filters
       application.filtersClasses.each { filter ->
-        // Should be used after verified call to 'accessControl'
-        log.debug "Injecting subject access methods to Filter ${filter}" 
-        injectAuthn(filter, application)      
+        // Should be used after verified call to 'accessControl' 
+        injectAuthn(filter.clazz, application)      
       }
 
       // Supply authenticated subject to controllers
       application.controllerClasses?.each { controller ->
-        log.debug "Injecting subject access methods to Controller ${controller}"
-        injectAuthn(controller, application)
+        injectAuthn(controller.clazz, application)
       }
 
       // Supply authenticated subject to services
       application.serviceClasses?.each { service ->
-        log.debug "Injecting subject access methods to Service ${service}"
-        injectAuthn(service, application)
+        injectAuthn(service.clazz, application)
       }
     }
 
@@ -93,16 +90,16 @@ as its internal authentication and access control layer.
   
   // Allows federation configuration to be seperately maintained in client app
   private ConfigObject loadFederatedConfig(GrailsApplication grailsApplication, def log) {
-        def config = grailsApplication.config
-        GroovyClassLoader classLoader = new GroovyClassLoader(getClass().classLoader)
+    def config = grailsApplication.config
+    GroovyClassLoader classLoader = new GroovyClassLoader(getClass().classLoader)
 
     // Merge federated config into main config environment if present otherwise expect client-app to supply using some other method
-        try {
-            config.merge(new ConfigSlurper(GrailsUtil.environment).parse(classLoader.loadClass('FederationConfig')))
-        } catch (Exception ignored) {
+    try {
+        config.merge(new ConfigSlurper(GrailsUtil.environment).parse(classLoader.loadClass('FederationConfig')))
+    } catch (Exception ignored) {
       log.debug "FederationConfig.groovy was not found or failed to load. Expecting federation config is provided by other means for Shiro SP integrator."
-        }
-
-        config
     }
+
+    config
+  }
 }
