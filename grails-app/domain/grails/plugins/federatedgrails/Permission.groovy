@@ -55,4 +55,12 @@ class Permission implements Serializable {
 
         return null
     }
+
+    def getDisplayType() {
+      def components = type.tokenize('.')
+      if(components)
+        components[components.size() - 1]
+      else
+        type
+    }
 }
