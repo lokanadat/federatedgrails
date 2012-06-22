@@ -1,0 +1,62 @@
+<plugin name='federated-grails' version='0.1' grailsVersion='2.0.3 &gt; *'>
+  <author>Bradley Beddoes</author>
+  <authorEmail>bradleybeddoes@gmail.com</authorEmail>
+  <title>Integrates Shibboleth Service Provider (Apache) into Shiro and Grails for federated applications.</title>
+  <description>\
+For application developers Federated environments can be somewhat daunting and complex. This plugin aim to ease the usage of Shibboleth SP software (http://www.shibboleth.net) with Grails applications. The plugin utilizes Shiro
+as its internal authentication and access control layer.
+</description>
+  <documentation>http://wiki.aaf.edu.au/spintegrators/federatedgrails</documentation>
+  <type>federatedGrailsGrailsPlugin</type>
+  <resources>
+    <resource>BootStrap</resource>
+    <resource>spring.resources</resource>
+    <resource>grails.plugins.federatedgrails.Permission</resource>
+    <resource>grails.plugins.federatedgrails.Role</resource>
+    <resource>grails.plugins.federatedgrails.SessionRecord</resource>
+    <resource>grails.plugins.federatedgrails.SubjectBase</resource>
+  </resources>
+  <repositories>
+    <repository name='grailsCentral' url='http://plugins.grails.org' />
+    <repository name='http://repo.grails.org/grails/plugins' url='http://repo.grails.org/grails/plugins/' />
+    <repository name='http://repo.grails.org/grails/core' url='http://repo.grails.org/grails/core/' />
+    <repository name='grailsCore' url='http://svn.codehaus.org/grails/trunk/grails-plugins' />
+    <repository name='mavenCentral' url='http://repo1.maven.org/maven2/' />
+    <repository name='http://m2repo.spockframework.org/releases/' url='http://m2repo.spockframework.org/releases/' />
+    <repository name='http://m2repo.spockframework.org/snapshots/' url='http://m2repo.spockframework.org/snapshots/' />
+    <repository name='http://download.java.net/maven/2/' url='http://download.java.net/maven/2/' />
+  </repositories>
+  <dependencies>
+    <test>
+      <dependency group='mysql' name='mysql-connector-java' version='5.1.18' />
+    </test>
+  </dependencies>
+  <plugins>
+    <runtime>
+      <plugin group='org.grails.plugins' name='zipped-resources' version='1.0' />
+      <plugin group='org.grails.plugins' name='mail' version='1.0' />
+      <plugin group='org.grails.plugins' name='code-coverage' version='1.2.5' />
+      <plugin group='org.grails.plugins' name='yui-minify-resources' version='0.1.5' />
+      <plugin group='org.grails.plugins' name='prototype' version='1.0' />
+      <plugin group='org.grails.plugins' name='shiro' version='1.1.3' />
+      <plugin group='org.grails.plugins' name='greenmail' version='1.3.2' />
+      <plugin group='org.grails.plugins' name='svn' version='1.0.2' />
+      <plugin group='org.grails.plugins' name='modernizr' version='2.0.6' />
+      <plugin group='org.grails.plugins' name='cached-resources' version='1.0' />
+      <plugin group='org.grails.plugins' name='twitter-bootstrap' version='2.0.1.17' />
+      <plugin group='org.grails.plugins' name='constraintkeys' version='0.1' />
+      <plugin group='org.grails.plugins' name='cache-headers' version='1.1.5' />
+      <plugin group='org.grails.plugins' name='codenarc' version='0.16.1' />
+      <plugin group='org.grails.plugins' name='tomcat' version='2.0.3' />
+      <plugin group='org.grails.plugins' name='jquery' version='1.7.1' />
+      <plugin group='org.grails.plugins' name='audit-logging' version='0.5.3' />
+      <plugin group='org.grails.plugins' name='avatar' version='0.3' />
+      <plugin group='org.grails.plugins' name='build-test-data' version='1.1.1' />
+      <plugin group='org.grails.plugins' name='hibernate' version='2.0.3' />
+      <plugin group='org.grails.plugins' name='resources' version='1.1.5' />
+      <plugin group='org.grails.plugins' name='console' version='1.0.1' />
+    </runtime>
+  </plugins>
+  <runtimePluginRequirements />
+  <behavior />
+</plugin>

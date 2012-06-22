@@ -7,8 +7,8 @@ import grails.plugins.federatedgrails.SubjectBase
 
 class federatedGrailsGrailsPlugin {
     def observe = ['controllers', 'services', 'filters'] 
-    def version = "0.1"
-    def grailsVersion = "1.3.7 > *"
+    def version = "0.2"
+    def grailsVersion = "2.0.0 > *"
     def dependsOn = [shiro:"1.1.3"]
 
     def pluginExcludes = [
@@ -23,7 +23,7 @@ For application developers Federated environments can be somewhat daunting and c
 as its internal authentication and access control layer.
 '''
 
-    def documentation = "http://wiki.aaf.edu.au/spintegrators/federatedgrails"
+    def documentation = "http://wiki.aaf.edu.au/tech-info/development-libraries-and-guides"
 
     def doWithWebDescriptor = { xml ->
     }

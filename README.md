@@ -1,4 +1,4 @@
-# FederatedGrails - 0.1
+# FederatedGrails - 0.2
 
 Allows Grails applications to easily integrate to federated authentication sources particuarly those served by Shibboleth service providers.
 
@@ -23,13 +23,7 @@ Installation
 ------------
 Prerequisite: Your Shibboleth SP is setup and working correctly (this doesn't apply if you simply wish to enable development mode on your local development environment).
 
-This version isn't published to rails plugins given early release status.
-
-Clone the repository to your local disk and in your BuildConfig.groovy file add:
-
-    grails.plugin.location.'federatedgrails'="your path"  
-
-Once this is done execute the supplied script to integrate
+Execute the supplied script to integrate
 
     grails integrate-federation Package Subject
 
@@ -37,6 +31,8 @@ Once this is done execute the supplied script to integrate
 * Subject should be the name of your subject class you can change this to say User if this better suits your application.
 
 All controllers except those supplied by the plugin will now be authenticated to the federation. Update grails-app/conf/SecurityFilters.groovy to make this more restrictive.
+
+On completion of this integration your application will have been provided with the AuthController and Federated/Database Realms. Generally the best place to start making extensions is within the provisioning and update routines located within FederatedRealm.groovy. In addition your Subject domain object will be located within the appropriate folder structure under your grails-app/domains directory.
 
 Configuration
 -------------
@@ -53,13 +49,6 @@ All configuration is managed in:
 * attributes - To use apache environment variables or HTTP headers to retrieve attributes. If you're making use of mod_jk to interface to your Tomcat instance from Apache this should be true.
 * mapping.XYZ - The set of attributes you expect to be delivered to your SP by remote IdP and available in your app
 
-Advanced Integration
---------------------
-To allow deployers to customize how their Subject objects are provisioned you can execute
-
-    grails advanced-federation
-
-This will provide you a copy of the AuthController and Federated/Database Realms. Generally the best place to start making extensions is within the provisioning and update routines located within FederatedRealm.groovy
 
 Contributing
 ------------

@@ -30,12 +30,12 @@ class DatabaseRealm {
     }
 
     def isPermitted(principal, requiredPermission) {      
-    // Required permission directly applied to the subject
+      // Required permission directly applied to the subject
         def subject = SubjectBase.get(principal)
         def permissions = subject.permissions
 
         def permitted = permissions?.find { ps ->
-            def perm = shiroPermissionResolver.resolvePermission(ps)
+            def perm = shiroPermissionResolver.resolvePermission(ps.target)
 
             if (perm.implies(requiredPermission)) {
                 return true
@@ -51,7 +51,7 @@ class DatabaseRealm {
         def results = SubjectBase.executeQuery("select distinct p from SubjectBase as subject join subject.roles as role join role.permissions as p where subject.id = '$principal'")
 
         permitted = results.find { ps ->
-            def perm = shiroPermissionResolver.resolvePermission(ps)
+            def perm = shiroPermissionResolver.resolvePermission(ps.target)
 
             if (perm.implies(requiredPermission)) {
                 return true

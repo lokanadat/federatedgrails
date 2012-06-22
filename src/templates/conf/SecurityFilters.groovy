@@ -9,7 +9,7 @@ class SecurityFilters {
                 if (!controllerName) return true
 
                 // Access control by convention
-        // Must only be authenticated we don't look at ${pack}.${subject} permissions (your app SHOULD however).
+                // Must only be authenticated we don't look at ${pack}.${subject} permissions (your app SHOULD however).
                 accessControl { true }
             }
         }
